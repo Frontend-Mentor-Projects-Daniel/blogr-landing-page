@@ -1,0 +1,24 @@
+{
+  "name": "blogr-landing-page",
+  "version": "1.0.0",
+  "description": "![Design preview for the Blogr Landing Page coding challenge](./develop/assets/images/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass --watch develop/sass/main.scss develop/css/styles.css",
+    "build": "sass develop/sass/main.scss develop/css/styles.css --style=compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frontend-Mentor-Projects-Daniel/blogr-landing-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Frontend-Mentor-Projects-Daniel/blogr-landing-page/issues"
+  },
+  "homepage": "https://github.com/Frontend-Mentor-Projects-Daniel/blogr-landing-page#readme",
+  "devDependencies": {
+    "sass": "^1.55.0"
+  }
+}

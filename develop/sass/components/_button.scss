@@ -1,0 +1,28 @@
+.btn {
+  --color-text: hsl(var(--clr-white));
+  --color-bg: hsl(var(--clr-very-light-red));
+
+  background-color: var(--color-bg);
+  border: none;
+  border-radius: 1.75rem;
+  color: var(--color-text);
+  cursor: pointer;
+  font-family: var(--ff-ubuntu);
+  font-weight: var(--fw-bold);
+  padding: 0.9em 2.5em;
+}
+
+.btn:hover {
+  --color-text: hsl(var(--clr-very-light-red));
+  --color-bg: hsl(var(--clr-white));
+}
+
+.btn.invert {
+  --color-text: hsl(var(--clr-very-light-red));
+  --color-bg: hsl(var(--clr-white));
+}
+
+.btn.invert:hover {
+  --color-text: hsl(var(--clr-white));
+  --color-bg: hsl(var(--clr-very-light-red));
+}
