@@ -40,6 +40,97 @@
     </style>
   </head>
   <body>
+    <header>
+      <section class="[ header-top ] [ center ]">
+        <div class="[ logo ]">
+          <img src="./develop/assets/images/logo.svg" alt="Blogr." />
+        </div>
+
+        <nav aria-label="header-top navigation" class="[ header-top__navbar ]">
+          <!-- menu icon -->
+          <button
+            class="[ menu ] [ d-none ]"
+            aria-expanded="false"
+            aria-label="Menu"
+          >
+            <img
+              src="./develop/assets/images/icon-hamburger.svg"
+              alt=""
+              aria-hidden="true"
+              data-menu-icon
+            />
+          </button>
+
+          <!-- nav list and dropdown -->
+          <ul class="[ nav-list ]">
+            <li>
+              <button
+                class="[ with-icon ] [ tab ]"
+                type="button"
+                aria-expanded="false"
+                aria-controls="id_about_menu"
+              >
+                <img
+                  class="[ icon ]"
+                  src="./develop/assets/images/icon-arrow-light.svg"
+                  alt=""
+                />
+                Product
+              </button>
+            </li>
+
+            <li>
+              <button
+                class="[ with-icon ] [ tab ]"
+                type="button"
+                aria-expanded="false"
+                aria-controls="id_about_menu"
+              >
+                <img
+                  class="[ icon ]"
+                  src="./develop/assets/images/icon-arrow-light.svg"
+                  alt=""
+                />
+                Company
+              </button>
+            </li>
+
+            <li>
+              <button
+                class="[ with-icon ] [ tab ]"
+                type="button"
+                aria-expanded="false"
+                aria-controls="connect-menu"
+              >
+                <img
+                  class="[ icon ]"
+                  src="./develop/assets/images/icon-arrow-light.svg"
+                  alt=""
+                />
+                Connect
+              </button>
+              <ul class="[ tab__dropdown ] [ d-none ]">
+                <li>
+                  <a href="#">Contact</a>
+                </li>
+                <li>
+                  <a href="#">Newsletter</a>
+                </li>
+                <li>
+                  <a href="#">LinkedIn</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="[ header-top__wrapper--buttons ]">
+          <a href="#">login</a>
+          <a href="#">Sign Up</a>
+        </div>
+      </section>
+    </header>
+
     <!-- <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"

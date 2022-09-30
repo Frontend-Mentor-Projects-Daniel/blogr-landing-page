@@ -40,6 +40,9 @@
   --space-xl: clamp(3.38rem, calc(3.24rem + 0.56vw), 3.75rem);
   --space-2xl: clamp(4.5rem, calc(4.32rem + 0.75vw), 5rem);
   --space-3xl: clamp(6.75rem, calc(6.49rem + 1.13vw), 7.5rem);
+  --space-4xl: clamp(7.88rem, calc(7.57rem + 1.31vw), 8.75rem);
+  --space-5xl: clamp(9rem, calc(8.65rem + 1.5vw), 10rem);
+  --space-6xl: clamp(10.13rem, calc(9.73rem + 1.69vw), 11.25rem);
 
   /* One-up pairs */
   --space-3xs-2xs: clamp(0.31rem, calc(0.2rem + 0.47vw), 0.63rem);
@@ -50,9 +53,13 @@
   --space-l-xl: clamp(2.25rem, calc(1.72rem + 2.25vw), 3.75rem);
   --space-xl-2xl: clamp(3.38rem, calc(2.8rem + 2.44vw), 5rem);
   --space-2xl-3xl: clamp(4.5rem, calc(3.44rem + 4.51vw), 7.5rem);
+  --space-3xl-4xl: clamp(6.75rem, calc(6.05rem + 3vw), 8.75rem);
+  --space-4xl-5xl: clamp(7.88rem, calc(7.13rem + 3.19vw), 10rem);
+  --space-5xl-6xl: clamp(9rem, calc(8.21rem + 3.38vw), 11.25rem);
 
   /* Custom pairs */
   --space-s-l: clamp(1.13rem, calc(0.64rem + 2.07vw), 2.5rem);
+  --space-m-5xl: clamp(1.69rem, calc(-1.24rem + 12.49vw), 10rem);
   --space-3xl-4xl: clamp(6.75rem, calc(6.05rem + 3vw), 8.75rem);
 
   // FONT FAMILIES
@@ -102,18 +109,19 @@ p {
 
 a {
   font-size: 1rem;
+  text-decoration: none;
 }
 
-nav a {
+.tab {
   font-size: 1.125rem;
 }
 
-nav li {
-  font-size: 1.125rem;
-}
-
-nav li a {
+.tab__dropdown {
   font-size: 1rem;
+}
+
+.tab__dropdown * {
+  font-size: inherit;
 }
 
 footer {
@@ -134,11 +142,15 @@ footer * {
 }
 
 @media only screen and (min-width: 48em) {
-  nav a {
+  .tab {
     font-size: 1rem;
   }
 
-  nav li a {
+  .tab__dropdown {
+    font-size: 0.9375rem;
+  }
+
+  footer {
     font-size: 0.9375rem;
   }
 }

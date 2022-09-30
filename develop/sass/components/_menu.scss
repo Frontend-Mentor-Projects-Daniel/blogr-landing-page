@@ -1,0 +1,11 @@
+.menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 48em) {
+  .menu {
+    display: block;
+  }
+}

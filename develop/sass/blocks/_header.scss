@@ -1,0 +1,52 @@
+//* ////////////////////
+//**  HEADER TOP
+//* ///////////////////
+.header-top {
+  --measure: 90rem;
+
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+
+  background-image: linear-gradient(var(--clr-pinkish-red));
+
+  border-radius: 0px 0px 0px 6.25rem;
+  box-sizing: border-box;
+  // padding-top: var(--space-xl-2xl);
+  padding-inline: var(--space-m-5xl);
+
+  @media only screen and (max-width: 48em) {
+    & {
+      justify-content: space-between;
+    }
+  }
+  //& //////////////////////////////////////////////////////////////////
+  &__navbar {
+    .nav-list {
+      display: none;
+    }
+
+    @media only screen and (min-width: 48em) {
+      .nav-list {
+        display: flex;
+        gap: 3rem;
+      }
+    }
+  }
+
+  //& //////////////////////////////////////////////////////////////////
+  &__wrapper--buttons {
+    display: none;
+    margin-left: auto;
+  }
+
+  @media only screen and (min-width: 48em) {
+    &__wrapper--buttons {
+      display: block;
+    }
+  }
+}
+
+//* ////////////////////
+//**  HEADER BOTTOM
+//* ///////////////////

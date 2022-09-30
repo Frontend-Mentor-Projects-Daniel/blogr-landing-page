@@ -1,0 +1,20 @@
+.tab {
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    border-bottom: 2px solid hsl(var(--clr-white));
+  }
+
+  &[aria-expanded='true'] > .icon {
+    transform: rotate(180deg);
+  }
+
+  & > .icon {
+    transition: 500ms;
+  }
+
+  &__dropdown {
+  }
+}
