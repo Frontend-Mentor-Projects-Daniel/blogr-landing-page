@@ -1,3 +1,22 @@
+@use '../mixins/breakpoints' as *;
+
+//* ////////////////////
+//**      HEADER
+//* ///////////////////
+.header {
+  background-image: url('../assets/images/bg-pattern-intro-mobile.svg'),
+    linear-gradient(var(--clr-pinkish-red));
+  background-position: 37% 33%;
+
+  border-radius: 0px 0px 0px 6.25rem;
+
+  @include breakpoint(tablet) {
+    background-image: url('../assets/images/bg-pattern-intro-desktop.svg'),
+      linear-gradient(var(--clr-pinkish-red));
+    background-position: 24% 52%;
+  }
+}
+
 //* ////////////////////
 //**  HEADER TOP
 //* ///////////////////
@@ -6,31 +25,70 @@
 
   display: flex;
   align-items: center;
-  gap: 4rem;
+  flex-wrap: wrap;
+  gap: var(--space-3xs-xl);
 
-  background-image: linear-gradient(var(--clr-pinkish-red));
-
-  border-radius: 0px 0px 0px 6.25rem;
   box-sizing: border-box;
-  // padding-top: var(--space-xl-2xl);
+  padding-top: var(--space-xl-2xl);
   padding-inline: var(--space-m-5xl);
+  position: relative;
 
-  @media only screen and (max-width: 48em) {
+  @include breakpoint-custom(48em) {
     & {
       justify-content: space-between;
     }
   }
+
   //& //////////////////////////////////////////////////////////////////
   &__navbar {
-    .nav-list {
-      display: none;
+    .menu[aria-expanded='true'] + .nav-list {
+      display: block;
+      // TODO: temporary - don't forget to remove this
+      background-color: black;
     }
 
-    @media only screen and (min-width: 48em) {
+    .nav-list {
+      display: none;
+      position: absolute;
+      top: 171%;
+      right: 0;
+    }
+
+    @include breakpoint(tablet) {
       .nav-list {
         display: flex;
-        gap: 3rem;
+        gap: 2rem;
+
+        position: static;
+
+        li {
+          position: relative;
+        }
+
+        .tab__dropdown {
+          position: absolute;
+          top: 224%;
+          left: 0;
+
+          background-color: hsl(var(--clr-white));
+          padding-left: 1.5rem;
+          padding-right: 3rem;
+          padding-block: 1.5rem;
+        }
       }
+    }
+  }
+
+  // for centering logo and menu on very small screens
+  @include breakpoint-custom(12rem) {
+    .logo {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__navbar {
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
@@ -40,9 +98,19 @@
     margin-left: auto;
   }
 
-  @media only screen and (min-width: 48em) {
+  @include breakpoint-custom(59.0625em) {
     &__wrapper--buttons {
-      display: block;
+      flex-direction: column;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    &__wrapper--buttons {
+      display: flex;
+    }
+
+    &__wrapper--buttons :first-child {
+      --hsla: 0.75;
     }
   }
 }
@@ -50,3 +118,32 @@
 //* ////////////////////
 //**  HEADER BOTTOM
 //* ///////////////////
+.header-bottom {
+  &__cta-with-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    padding-top: var(--space-3xl-4xl);
+    padding-left: var(--space-m-10xl);
+    padding-right: var(--space-m-10xl);
+    padding-bottom: 9.375rem;
+
+    & .text-info {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3xs-xs);
+    }
+
+    .wrapper--buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+
+      & > * {
+        padding: 0.9em 1.5em;
+      }
+    }
+  }
+}

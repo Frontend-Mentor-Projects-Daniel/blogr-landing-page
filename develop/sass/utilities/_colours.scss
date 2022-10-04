@@ -1,73 +1,77 @@
 //* background
 .bg-light-red {
-  background-color: hsl(var(--clr-light-red), --hsla);
+  background-color: hsl(var(--clr-light-red), var(--hsla));
 }
 
 .bg-very-light-red {
-  background-color: hsl(var(--clr-very-light-red), --hsla);
+  background-color: hsl(var(--clr-very-light-red), var(--hsla));
 }
 
 .bg-very-dark-blue {
-  background-color: hsl(var(--clr-very-dark-blue), --hsla);
+  background-color: hsl(var(--clr-very-dark-blue), var(--hsla));
 }
 
 .bg-white {
-  background-color: hsl(var(--clr-white), --hsla);
+  background-color: hsl(var(--clr-white), var(--hsla));
 }
 
 .bg-grayish-blue {
-  background-color: hsl(var(--clr-grayish-blue), --hsla);
+  background-color: hsl(var(--clr-grayish-blue), var(--hsla));
 }
 
 .bg-very-dark-grayish-blue {
-  background-color: hsl(var(--clr-very-dark-grayish-blue), --hsla);
+  background-color: hsl(var(--clr-very-dark-grayish-blue), var(--hsla));
 }
 
 .bg-very-dark-black-blue {
-  background-color: hsl(var(--clr-very-dark-black-blue), --hsla);
+  background-color: hsl(var(--clr-very-dark-black-blue), var(--hsla));
 }
 
 .bg-pinkish-red {
-  background-color: hsl(var(--clr-pinkish-red), --hsla);
+  background-color: hsl(var(--clr-pinkish-red), var(--hsla));
 }
 
 .bg-onyx {
-  background-color: hsl(var(--clr-onyx), --hsla);
+  background-color: hsl(var(--clr-onyx), var(--hsla));
+}
+
+.bg-transparent {
+  background-color: transparent;
 }
 
 //* text
 .text-light-red {
-  background-color: hsl(var(--clr-light-red), --hsla);
+  color: hsl(var(--clr-light-red), var(--hsla));
 }
 
 .text-very-light-red {
-  background-color: hsl(var(--clr-very-light-red), --hsla);
+  color: hsl(var(--clr-very-light-red), var(--hsla));
 }
 
 .text-very-dark-blue {
-  background-color: hsl(var(--clr-very-dark-blue), --hsla);
+  color: hsl(var(--clr-very-dark-blue), var(--hsla));
 }
 
 .text-white {
-  background-color: hsl(var(--clr-white), --hsla);
+  color: hsl(var(--clr-white), var(--hsla));
 }
 
 .text-grayish-blue {
-  background-color: hsl(var(--clr-grayish-blue), --hsla);
+  color: hsl(var(--clr-grayish-blue), var(--hsla));
 }
 
 .text-very-dark-grayish-blue {
-  background-color: hsl(var(--clr-very-dark-grayish-blue), --hsla);
+  color: hsl(var(--clr-very-dark-grayish-blue), var(--hsla));
 }
 
 .text-very-dark-black-blue {
-  background-color: hsl(var(--clr-very-dark-black-blue), --hsla);
+  color: hsl(var(--clr-very-dark-black-blue), var(--hsla));
 }
 
 .text-pinkish-red {
-  background-color: hsl(var(--clr-pinkish-red), --hsla);
+  color: hsl(var(--clr-pinkish-red), var(--hsla));
 }
 
 .text-onyx {
-  background-color: hsl(var(--clr-onyx), --hsla);
+  color: hsl(var(--clr-onyx), var(--hsla));
 }

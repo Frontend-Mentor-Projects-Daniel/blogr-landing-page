@@ -1,6 +1,6 @@
 .btn {
-  --color-text: hsl(var(--clr-white));
-  --color-bg: hsl(var(--clr-very-light-red));
+  --color-text: hsl(var(--clr-white), var(--hsla));
+  --color-bg: hsl(var(--clr-very-light-red), var(--hsla));
 
   background-color: var(--color-bg);
   border: none;
@@ -25,4 +25,8 @@
 .btn.invert:hover {
   --color-text: hsl(var(--clr-white));
   --color-bg: hsl(var(--clr-very-light-red));
+}
+
+.btn.white-border {
+  border: 1px solid hsl(var(--clr-white));
 }

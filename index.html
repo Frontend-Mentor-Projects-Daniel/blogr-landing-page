@@ -40,7 +40,7 @@
     </style>
   </head>
   <body>
-    <header>
+    <header class="[ header ]">
       <section class="[ header-top ] [ center ]">
         <div class="[ logo ]">
           <img src="./develop/assets/images/logo.svg" alt="Blogr." />
@@ -48,11 +48,7 @@
 
         <nav aria-label="header-top navigation" class="[ header-top__navbar ]">
           <!-- menu icon -->
-          <button
-            class="[ menu ] [ d-none ]"
-            aria-expanded="false"
-            aria-label="Menu"
-          >
+          <button class="[ menu ]" aria-expanded="false" aria-label="Menu">
             <img
               src="./develop/assets/images/icon-hamburger.svg"
               alt=""
@@ -65,10 +61,10 @@
           <ul class="[ nav-list ]">
             <li>
               <button
-                class="[ with-icon ] [ tab ]"
+                class="[ with-icon ] [ tab ] [ text-white fw-bold ]"
                 type="button"
                 aria-expanded="false"
-                aria-controls="id_about_menu"
+                aria-controls="product_menu"
               >
                 <img
                   class="[ icon ]"
@@ -81,10 +77,10 @@
 
             <li>
               <button
-                class="[ with-icon ] [ tab ]"
+                class="[ with-icon ] [ tab ] [ text-white fw-bold ]"
                 type="button"
                 aria-expanded="false"
-                aria-controls="id_about_menu"
+                aria-controls="company_menu"
               >
                 <img
                   class="[ icon ]"
@@ -97,7 +93,7 @@
 
             <li>
               <button
-                class="[ with-icon ] [ tab ]"
+                class="[ with-icon ] [ tab ] [ text-white fw-bold ]"
                 type="button"
                 aria-expanded="false"
                 aria-controls="connect-menu"
@@ -111,13 +107,25 @@
               </button>
               <ul class="[ tab__dropdown ] [ d-none ]">
                 <li>
-                  <a href="#">Contact</a>
+                  <a
+                    href="#"
+                    class="[ text-very-dark-black-blue ] [ hover-fw-bold ]"
+                    >Contact</a
+                  >
                 </li>
                 <li>
-                  <a href="#">Newsletter</a>
+                  <a
+                    href="#"
+                    class="[ text-very-dark-black-blue ] [ hover-fw-bold ]"
+                    >Newsletter</a
+                  >
                 </li>
                 <li>
-                  <a href="#">LinkedIn</a>
+                  <a
+                    href="#"
+                    class="[ text-very-dark-black-blue ] [ hover-fw-bold ]"
+                    >LinkedIn</a
+                  >
                 </li>
               </ul>
             </li>
@@ -125,8 +133,26 @@
         </nav>
 
         <div class="[ header-top__wrapper--buttons ]">
-          <a href="#">login</a>
-          <a href="#">Sign Up</a>
+          <a href="#" class="[ btn ] [ bg-transparent text-white ]">login</a>
+          <a href="#" class="[ btn invert ]">Sign Up</a>
+        </div>
+      </section>
+
+      <section class="[ header-bottom ]">
+        <div class="[ header-bottom__cta-with-text ]">
+          <div class="[ text-info ]">
+            <h1 class="[ fw-semi-bold lh-55 text-align-center text-white ]">
+              A modern publishing platform
+            </h1>
+            <p class="[ fw-regular lh-28 text-align-center text-white ]">
+              Grow your audience and build your online brand
+            </p>
+          </div>
+
+          <div class="[ wrapper--buttons ]">
+            <a href="#" class="[ btn invert ]">Start for Free</a>
+            <a href="#" class="[ btn white-border ]">Learn More</a>
+          </div>
         </div>
       </section>
     </header>

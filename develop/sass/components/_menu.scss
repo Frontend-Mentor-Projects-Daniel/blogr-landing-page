@@ -1,11 +1,15 @@
+@use '../mixins/breakpoints' as *;
+
 .menu {
+  display: none;
+
   background-color: transparent;
   border: none;
   cursor: pointer;
-}
 
-@media only screen and (max-width: 48em) {
-  .menu {
-    display: block;
+  @include breakpoint-custom(47.9375em) {
+    & {
+      display: block;
+    }
   }
 }

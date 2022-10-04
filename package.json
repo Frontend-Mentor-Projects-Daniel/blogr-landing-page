@@ -4,8 +4,9 @@
   "description": "![Design preview for the Blogr Landing Page coding challenge](./develop/assets/images/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
-    "start": "sass --watch develop/sass/main.scss develop/css/styles.css",
-    "build": "sass develop/sass/main.scss develop/css/styles.css --style=compressed"
+    "start": "sass --watch develop/sass/main.scss develop/css/styles.css & npm run ts",
+    "build": "sass develop/sass/main.scss develop/css/styles.css --style=compressed",
+    "ts": "tsc develop/js/script.ts --watch"
   },
   "repository": {
     "type": "git",
