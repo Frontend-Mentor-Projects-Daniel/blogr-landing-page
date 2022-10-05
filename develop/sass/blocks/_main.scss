@@ -1,0 +1,7 @@
+.main {
+  margin-top: var(--space-3xl-4xl);
+
+  & h2:first-child {
+    margin-bottom: var(--space-l-2xl);
+  }
+}
