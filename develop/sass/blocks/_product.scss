@@ -26,6 +26,7 @@
     gap: var(--space-l-xl);
 
     padding-left: var(--space-m-5xl);
+    padding-right: 1.5rem;
 
     .wrapper {
       display: flex;
@@ -54,6 +55,8 @@
     &__content {
       grid-column: 1/2;
       grid-row: 1/2;
+
+      padding-right: 0;
 
       .wrapper {
         align-items: flex-start;
