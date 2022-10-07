@@ -1,17 +1,23 @@
 @use '../mixins/breakpoints' as *;
 
 .product {
-  display: grid;
-  grid-template-rows: min-content max-content;
-  row-gap: 2.875rem;
+  --min: 376px;
+
+  align-items: center;
 
   &__image {
     --d: 0;
+
+    grid-column: 1/2;
+    grid-row: 1/2;
 
     align-items: flex-start;
   }
 
   &__content {
+    grid-column: 1/2;
+    grid-row: 2/3;
+
     display: flex;
     flex-direction: column;
     gap: var(--space-l-xl);
@@ -33,16 +39,9 @@
   }
 
   @include breakpoint(tablet) {
-    .product {
-      grid-template-columns: 1fr max-content;
-      align-items: center;
-    }
-
     &__image {
       grid-column: 2/3;
-      grid-row: 1/2;
-      // transform: translate(31%, -22%);
-      transform: translateY(-22%);
+      transform: translateX(26%);
     }
 
     &__content {

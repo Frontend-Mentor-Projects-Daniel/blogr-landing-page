@@ -323,9 +323,9 @@ footer * {
   grid-gap: 1rem;
 }
 
-@supports (width: min(var(--min, 250px), 100%)) {
+@supports (width: min(var(--min), 100%)) {
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(min(var(--min, 250px), 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--min), 100%), 1fr));
   }
 }
 .icon {
@@ -630,15 +630,18 @@ footer * {
 }
 
 .product {
-  display: grid;
-  grid-template-rows: min-content max-content;
-  row-gap: 2.875rem;
+  --min: 376px;
+  align-items: center;
 }
 .product__image {
   --d: 0;
+  grid-column: 1/2;
+  grid-row: 1/2;
   align-items: flex-start;
 }
 .product__content {
+  grid-column: 1/2;
+  grid-row: 2/3;
   display: flex;
   flex-direction: column;
   gap: var(--space-l-xl);
@@ -656,14 +659,9 @@ footer * {
   text-align: center;
 }
 @media (min-width: 48em) {
-  .product .product {
-    grid-template-columns: 1fr max-content;
-    align-items: center;
-  }
   .product__image {
     grid-column: 2/3;
-    grid-row: 1/2;
-    transform: translateY(-22%);
+    transform: translateX(26%);
   }
   .product__content {
     grid-column: 1/2;
@@ -674,6 +672,47 @@ footer * {
   }
   .product__content .wrapper h3,
 .product__content .wrapper p {
+    text-align: start;
+  }
+}
+
+.product-mobile {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 13.8125rem 25.25rem;
+  justify-items: center;
+  background-image: url("../assets/images/bg-pattern-circles.svg"), linear-gradient(var(--clr-onyx));
+  border-radius: 0px 6.25rem;
+  margin-top: 17.0625rem;
+}
+.product-mobile__image {
+  --d: 16;
+  max-width: 26.6875rem;
+  transform: translateY(-50%);
+}
+.product-mobile__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.625rem;
+  padding: 1.5rem;
+}
+.product-mobile__content span,
+.product-mobile__content p {
+  max-width: 49ch;
+  text-align: center;
+}
+@media (min-width: 48em) {
+  .product-mobile {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 25rem;
+    align-items: center;
+  }
+  .product-mobile__image {
+    transform: translateY(0);
+  }
+  .product-mobile__content span,
+.product-mobile__content p {
     text-align: start;
   }
 }
