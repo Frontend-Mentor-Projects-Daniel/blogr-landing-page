@@ -44,18 +44,7 @@
 
   &__reversed {
     margin-top: 4.0625rem;
-
-    & > :first-child {
-      // grid-column: 1/2;
-
-      // transform: translateX(-29%);
-    }
-
     & > :last-child {
-      // grid-column: 2/3;
-
-      // padding: 0;
-
       p {
         max-width: 48.7ch;
       }

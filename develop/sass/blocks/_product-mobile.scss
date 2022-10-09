@@ -8,14 +8,24 @@
   gap: 0;
   justify-items: center;
 
-  // background-image: url('../assets/images/bg-pattern-circles.svg'),
-  //   linear-gradient(var(--clr-onyx));
-  // background-repeat: no-repeat;
-  // background-position: 50% 300%;
   background-image: linear-gradient(var(--clr-onyx));
-
   border-radius: 0px 6.25rem;
   margin-top: 17.0625rem;
+  position: relative;
+
+  &__background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-image: url('../assets/images/bg-pattern-circles.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 135%;
+
+    border-radius: 0px 6.25rem;
+  }
 
   &__image {
     --d: 1;
@@ -27,19 +37,23 @@
     max-height: 22.5rem;
     max-width: 22.688rem;
     position: relative;
+    z-index: 11111;
 
-    &::after {
-      content: '';
+    // &::after {
+    //   content: '';
 
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
 
-      background-image: url('../assets/images/bg-pattern-circles.svg');
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
+    //   background-image: url('../assets/images/bg-pattern-circles.svg');
+    //   background-repeat: no-repeat;
+    //   background-size: cover;
+
+    //   height: 21.8125rem;
+    //   width: 21.875rem;
+    //   z-index: -1;
+    // }
   }
 
   &__content {
@@ -65,7 +79,9 @@
     & {
       grid-template-rows: 12.5rem 12.5rem;
 
-      background-position: -60% 100%;
+      &__background {
+        background-position: -62% 85%;
+      }
 
       &__image {
         grid-column: 1/2;
