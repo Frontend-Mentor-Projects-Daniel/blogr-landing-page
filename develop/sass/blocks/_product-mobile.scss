@@ -3,7 +3,7 @@
 .product-mobile {
   --min: 376px;
 
-  grid-template-rows: 19.5313rem 19.5313rem;
+  grid-template-rows: 208px 417px;
   align-items: center;
   gap: 0;
   justify-items: center;
@@ -27,7 +27,6 @@
     max-height: 22.5rem;
     max-width: 22.688rem;
     position: relative;
-    transform: translateY(-45%);
 
     &::after {
       content: '';
@@ -54,7 +53,6 @@
 
     padding: 1.5rem;
     padding-bottom: 0;
-    transform: translateY(-35%);
 
     span,
     p {
