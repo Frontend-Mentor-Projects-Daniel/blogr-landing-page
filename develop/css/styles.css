@@ -124,6 +124,7 @@ ul {
   --space-m-5xl: clamp(1.69rem, calc(-1.24rem + 12.49vw), 10rem);
   --space-m-10xl: clamp(1.69rem, calc(-3.44rem + 21.88vw), 16.25rem);
   --space-l-2xl: clamp(2.25rem, calc(1.28rem + 4.13vw), 5rem);
+  --space-2xl-6xl: clamp(4.5rem, calc(2.12rem + 10.14vw), 11.25rem);
   --space-3xl-4xl: clamp(6.75rem, calc(6.05rem + 3vw), 8.75rem);
   --space-m-3xs: clamp(0.31rem, calc(2.17rem + -2.07vw), 1.69rem);
   --space-l-3xs: clamp(0.31rem, calc(2.93rem + -2.91vw), 2.25rem);
@@ -817,6 +818,28 @@ footer * {
   .product-mobile__content span,
 .product-mobile__content p {
     text-align: start;
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: var(--space-2xl-6xl);
+  justify-content: center;
+  background-color: hsl(var(--clr-very-dark-black-blue));
+  border-radius: 0px 100px 0px 0px;
+}
+.footer__nav {
+  width: 100%;
+}
+.footer__nav .nav-list {
+  --min: 376px;
+  justify-items: center;
+}
+@media (min-width: 48em) {
+  .footer {
+    flex-direction: row;
   }
 }
 

@@ -1,0 +1,28 @@
+@use '../mixins/breakpoints' as *;
+
+.footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: var(--space-2xl-6xl);
+  justify-content: center;
+
+  background-color: hsl(var(--clr-very-dark-black-blue));
+  border-radius: 0px 100px 0px 0px;
+
+  &__nav {
+    width: 100%;
+
+    .nav-list {
+      --min: 376px;
+
+      justify-items: center;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    & {
+      flex-direction: row;
+    }
+  }
+}
