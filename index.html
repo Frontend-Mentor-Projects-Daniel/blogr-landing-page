@@ -58,55 +58,127 @@
             />
           </button>
 
-          <!-- nav list and dropdown -->
           <ul class="[ nav-list ]">
-            <li>
+            <li class="[ tab ]">
+              <a href="#" class="[ fw-bold text-white ]">Product</a>
               <button
-                class="[ with-icon ] [ tab ] [ text-white fw-bold ]"
-                type="button"
                 aria-expanded="false"
-                aria-controls="product_menu"
+                aria-controls="product-menu"
+                aria-label="Product Pages"
               >
-                <img
-                  class="[ icon ]"
-                  src="./develop/assets/images/icon-arrow-light.svg"
-                  alt=""
-                />
-                Product
+                <picture>
+                  <source
+                    srcset="./develop/assets/images/icon-arrow-light.svg"
+                    media="(min-width: 48em)"
+                  />
+                  <source
+                    srcset="./develop/assets/images/icon-arrow-dark.svg"
+                    media="(min-width: 23.4375em)"
+                  />
+                  <img
+                    class="[ icon ]"
+                    src="./develop/assets/images/icon-arrow-dark.svg"
+                    alt=""
+                  />
+                </picture>
               </button>
+              <ul class="[ tab__dropdown ]">
+                <li>
+                  <a
+                    href="#"
+                    class="[ text-very-dark-black-blue ] [ hover-fw-bold ]"
+                    >Contact</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="[ text-very-dark-black-blue ] [ hover-fw-bold ]"
+                    >Newsletter</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="[ text-very-dark-black-blue ] [ hover-fw-bold ]"
+                    >LinkedIn</a
+                  >
+                </li>
+              </ul>
             </li>
 
-            <li>
+            <li class="[ tab ]">
+              <a href="#" class="[ fw-bold text-white ]">Product</a>
               <button
-                class="[ with-icon ] [ tab ] [ text-white fw-bold ]"
-                type="button"
                 aria-expanded="false"
-                aria-controls="company_menu"
+                aria-controls="product-menu"
+                aria-label="Product Pages"
               >
-                <img
-                  class="[ icon ]"
-                  src="./develop/assets/images/icon-arrow-light.svg"
-                  alt=""
-                />
-                Company
+                <picture>
+                  <source
+                    srcset="./develop/assets/images/icon-arrow-light.svg"
+                    media="(min-width: 48em)"
+                  />
+                  <source
+                    srcset="./develop/assets/images/icon-arrow-dark.svg"
+                    media="(min-width: 23.4375em)"
+                  />
+                  <img
+                    class="[ icon ]"
+                    src="./develop/assets/images/icon-arrow-dark.svg"
+                    alt=""
+                  />
+                </picture>
               </button>
+              <ul class="[ tab__dropdown ]">
+                <li>
+                  <a
+                    href="#"
+                    class="[ text-very-dark-black-blue ] [ hover-fw-bold ]"
+                    >Contact</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="[ text-very-dark-black-blue ] [ hover-fw-bold ]"
+                    >Newsletter</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="[ text-very-dark-black-blue ] [ hover-fw-bold ]"
+                    >LinkedIn</a
+                  >
+                </li>
+              </ul>
             </li>
 
-            <li>
+            <li class="[ tab ]">
+              <a href="#" class="[ fw-bold text-white ]">Product</a>
               <button
-                class="[ with-icon ] [ tab ] [ text-white fw-bold ]"
-                type="button"
                 aria-expanded="false"
-                aria-controls="connect-menu"
+                aria-controls="product-menu"
+                aria-label="Product Pages"
               >
-                <img
-                  class="[ icon ]"
-                  src="./develop/assets/images/icon-arrow-light.svg"
-                  alt=""
-                />
-                Connect
+                <picture>
+                  <source
+                    srcset="./develop/assets/images/icon-arrow-light.svg"
+                    media="(min-width: 48em)"
+                  />
+                  <source
+                    srcset="./develop/assets/images/icon-arrow-dark.svg"
+                    media="(min-width: 23.4375em)"
+                  />
+                  <img
+                    class="[ icon ]"
+                    src="./develop/assets/images/icon-arrow-dark.svg"
+                    alt=""
+                  />
+                </picture>
               </button>
-              <ul class="[ tab__dropdown ] [ d-none ]">
+              <ul class="[ tab__dropdown ]">
                 <li>
                   <a
                     href="#"
@@ -211,23 +283,22 @@
       </div>
 
       <div class="[ product-mobile ] [ grid ]">
-          <div class="[ product-mobile__background ]"></div>
+        <div class="[ product-mobile__background ]"></div>
 
-          <div class="[ product-mobile__image ] [ frame ]">
-            <img src="./develop/assets/images/illustration-phones.svg" alt="" />
-          </div>
-  
-          <div class="[ product-mobile__content ]">
-            <span class="[ header--large ] [ fw-semi-bold lh-61 text-white ]"
-              >State of the Art Infrastructure</span
-            >
-            <p class="[ fw-regular lh-28 text-white ]">
-              With reliability and speed in mind, worldwide data centers provide
-              the backbone for ultra-fast connectivity. This ensures your site
-              will load instantly, no matter where your readers are, keeping your
-              site competitive.
-            </p>
-          </div>
+        <div class="[ product-mobile__image ] [ frame ]">
+          <img src="./develop/assets/images/illustration-phones.svg" alt="" />
+        </div>
+
+        <div class="[ product-mobile__content ]">
+          <span class="[ header--large ] [ fw-semi-bold lh-61 text-white ]"
+            >State of the Art Infrastructure</span
+          >
+          <p class="[ fw-regular lh-28 text-white ]">
+            With reliability and speed in mind, worldwide data centers provide
+            the backbone for ultra-fast connectivity. This ensures your site
+            will load instantly, no matter where your readers are, keeping your
+            site competitive.
+          </p>
         </div>
       </div>
 
@@ -278,6 +349,11 @@
       </div>
     </main>
 
+    <footer class="[ footer ]">
+      <div class="[ footer__logo ]">
+        <img src="./develop/assets/images/logo.svg" alt="Blogr." />
+      </div>
+    </footer>
     <!-- <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"

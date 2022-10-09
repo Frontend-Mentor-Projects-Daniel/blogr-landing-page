@@ -40,44 +40,6 @@
   }
 
   //& //////////////////////////////////////////////////////////////////
-  &__navbar {
-    .menu[aria-expanded='true'] + .nav-list {
-      display: block;
-      // TODO: temporary - don't forget to remove this
-      background-color: black;
-    }
-
-    .nav-list {
-      display: none;
-      position: absolute;
-      top: 171%;
-      right: 0;
-    }
-
-    @include breakpoint(tablet) {
-      .nav-list {
-        display: flex;
-        gap: 2rem;
-
-        position: static;
-
-        li {
-          position: relative;
-        }
-
-        .tab__dropdown {
-          position: absolute;
-          top: 224%;
-          left: 0;
-
-          background-color: hsl(var(--clr-white));
-          padding-left: 1.5rem;
-          padding-right: 3rem;
-          padding-block: 1.5rem;
-        }
-      }
-    }
-  }
 
   // for centering logo and menu on very small screens
   @include breakpoint-custom(12rem) {
