@@ -1,52 +1,58 @@
 @use '../mixins/breakpoints' as *;
 
 .menu {
-  display: none;
-
   background-color: transparent;
   border: none;
   cursor: pointer;
-
-  &[aria-expanded='true'] + .nav-list {
-    display: block;
-  }
-
-  & + .nav-list {
-    // display: none;
-    position: absolute;
-    top: 139%;
-    right: 7%;
-  }
-
-  // show menu
-  @include breakpoint-custom(47.9375em) {
-    & {
-      display: block;
-    }
-
-    & + .nav-list {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      // justify-content: center;
-      gap: 24px;
-
-      background-color: hsl(var(--clr-white));
-      height: 511px;
-      width: 324px;
-    }
-  }
-
-  @include breakpoint(tablet) {
-    & + .nav-list {
-      display: flex;
-      gap: 2rem;
-
-      position: static;
-
-      li {
-        position: relative;
-      }
-    }
-  }
 }
+
+// .menu {
+//   display: none;
+
+//   background-color: transparent;
+//   border: none;
+//   cursor: pointer;
+
+//   &[aria-expanded='true'] + .nav-list {
+//     display: block;
+//   }
+
+//   & + .nav-list {
+//     // display: none;
+//     position: absolute;
+//     top: 139%;
+//     right: 7%;
+//   }
+
+//   // show menu
+//   @include breakpoint-custom(47.9375em) {
+//     & {
+//       display: block;
+//     }
+
+//     & + .nav-list {
+//       display: flex;
+//       align-items: center;
+//       flex-direction: column;
+//       // justify-content: center;
+//       gap: 24px;
+
+//       background-color: hsl(var(--clr-white));
+//       height: 511px;
+//       width: 324px;
+//     }
+//   }
+
+//   @include breakpoint(tablet) {
+//     & + .nav-list {
+//       display: flex;
+//       gap: 2rem;
+
+//       position: static;
+
+//       li {
+//         position: relative;
+//       }
+//     }
+//   }
+// }

@@ -23,56 +23,91 @@
 .header-top {
   --measure: 90rem;
 
-  display: flex;
+  display: grid;
+  grid-template-columns: max-content 1fr;
   align-items: center;
-  flex-wrap: wrap;
-  gap: var(--space-3xs-xl);
+  justify-items: end;
 
   box-sizing: border-box;
   padding-top: var(--space-xl-2xl);
   padding-inline: var(--space-m-5xl);
   position: relative;
 
-  @include breakpoint-custom(48em) {
+  &__logo {
+  }
+
+  &__navbar {
+    .menu {
+      display: block;
+    }
+
+    .nav-list {
+      display: none;
+
+      .tab.has-submenu {
+        .sub-menu {
+          display: none;
+        }
+      }
+    }
+
+    .menu[aria-expanded='true'] + .nav-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, 1fr);
+      align-items: start;
+      justify-items: center;
+
+      position: absolute;
+      top: 119%;
+      right: 7%;
+
+      background: #ffffff;
+      box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.243444);
+      border-radius: 5px;
+      height: 511px;
+      width: 324px;
+    }
+
+    .nav-list {
+      .tab.has-submenu {
+        .tab__item[aria-expanded='true'] + button + .sub-menu {
+          display: block;
+        }
+      }
+    }
+  }
+
+  // make logo and menu stack on very small screen sizes
+  @include breakpoint-custom(11.6875em) {
     & {
-      justify-content: space-between;
-    }
-  }
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      justify-items: center;
 
-  //& //////////////////////////////////////////////////////////////////
+      &__logo {
+        grid-column: 1/2;
+        grid-row: 1/2;
+      }
 
-  // for centering logo and menu on very small screens
-  @include breakpoint-custom(12rem) {
-    .logo {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    &__navbar {
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-
-  //& //////////////////////////////////////////////////////////////////
-  &__wrapper--buttons {
-    display: none;
-    margin-left: auto;
-  }
-
-  @include breakpoint-custom(59.0625em) {
-    &__wrapper--buttons {
-      flex-direction: column;
+      &__navbar {
+        grid-column: 1/2;
+        grid-row: 2/3;
+      }
     }
   }
 
   @include breakpoint(tablet) {
-    &__wrapper--buttons {
-      display: flex;
-    }
+    & {
+      &__navbar {
+        .menu {
+          display: none;
+        }
 
-    &__wrapper--buttons :first-child {
-      --hsla: 0.75;
+        .nav-list {
+          display: flex;
+        }
+      }
     }
   }
 }

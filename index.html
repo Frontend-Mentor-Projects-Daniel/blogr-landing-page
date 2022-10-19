@@ -41,31 +41,30 @@
   </head>
   <body>
     <header class="[ header ] [ center ]">
-      <!-- I messed up with this, will come back to it -->
       <section class="[ header-top ] [ center ]">
-        <div class="[ logo ]">
+        <div class="[ header-top__logo ]">
           <img src="./develop/assets/images/logo.svg" alt="Blogr." />
         </div>
 
         <nav aria-label="header-top navigation" class="[ header-top__navbar ]">
-          <!-- menu icon -->
-          <button class="[ menu ]" aria-expanded="false" aria-label="Menu">
+          <button class="[ menu ]" aria-expanded="true" aria-label="Menu">
             <img
               src="./develop/assets/images/icon-hamburger.svg"
               alt=""
               aria-hidden="true"
-              data-menu-icon
             />
           </button>
 
           <ul class="[ nav-list ]">
-            <li class="[ tab ]">
-              <a href="#" class="[ fw-bold text-white ]">Product</a>
-              <button
+            <li class="[ tab has-submenu ]">
+              <a
+                href="#"
+                class="[ tab__item ]"
+                aria-haspopup="true"
                 aria-expanded="false"
-                aria-controls="product-menu"
-                aria-label="Product Pages"
+                >Product</a
               >
+              <button class="[ has-icon ]" aria-expanded="false">
                 <picture>
                   <source
                     srcset="./develop/assets/images/icon-arrow-light.svg"
@@ -81,39 +80,25 @@
                     alt=""
                   />
                 </picture>
+                <span class="[ sr-only ]">Dropdown Menu</span>
               </button>
-              <ul class="[ tab__dropdown ]">
-                <li>
-                  <a
-                    href="#"
-                    class="[ text-very-dark-black-blue ] [ hover-fw-bold ]"
-                    >Contact</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="[ text-very-dark-black-blue ] [ hover-fw-bold ]"
-                    >Newsletter</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="[ text-very-dark-black-blue ] [ hover-fw-bold ]"
-                    >LinkedIn</a
-                  >
-                </li>
+
+              <ul class="[ sub-menu ]">
+                <li><a href="#" class="[ tab__item ]">Contact</a></li>
+                <li><a href="#" class="[ tab__item ]">Newsletter</a></li>
+                <li><a href="#" class="[ tab__item ]">LinkedIn</a></li>
               </ul>
             </li>
 
-            <li class="[ tab ]">
-              <a href="#" class="[ fw-bold text-white ]">Product</a>
-              <button
+            <li class="[ tab has-submenu ]">
+              <a
+                href="#"
+                class="[ tab__item ]"
+                aria-haspopup="true"
                 aria-expanded="false"
-                aria-controls="product-menu"
-                aria-label="Product Pages"
+                >Product</a
               >
+              <button class="[ has-icon ]" aria-expanded="false">
                 <picture>
                   <source
                     srcset="./develop/assets/images/icon-arrow-light.svg"
@@ -129,39 +114,25 @@
                     alt=""
                   />
                 </picture>
+                <span class="[ sr-only ]">Dropdown Menu</span>
               </button>
-              <ul class="[ tab__dropdown ]">
-                <li>
-                  <a
-                    href="#"
-                    class="[ text-very-dark-black-blue ] [ hover-fw-bold ]"
-                    >Contact</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="[ text-very-dark-black-blue ] [ hover-fw-bold ]"
-                    >Newsletter</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="[ text-very-dark-black-blue ] [ hover-fw-bold ]"
-                    >LinkedIn</a
-                  >
-                </li>
+
+              <ul class="[ sub-menu ]">
+                <li><a href="#" class="[ tab__item ]">Contact</a></li>
+                <li><a href="#" class="[ tab__item ]">Newsletter</a></li>
+                <li><a href="#" class="[ tab__item ]">LinkedIn</a></li>
               </ul>
             </li>
 
-            <li class="[ tab ]">
-              <a href="#" class="[ fw-bold text-white ]">Product</a>
-              <button
+            <li class="[ tab has-submenu ]">
+              <a
+                href="#"
+                class="[ tab__item ]"
+                aria-haspopup="true"
                 aria-expanded="false"
-                aria-controls="product-menu"
-                aria-label="Product Pages"
+                >Product</a
               >
+              <button class="[ has-icon ]" aria-expanded="false">
                 <picture>
                   <source
                     srcset="./develop/assets/images/icon-arrow-light.svg"
@@ -177,38 +148,20 @@
                     alt=""
                   />
                 </picture>
+                <span class="[ sr-only ]">Dropdown Menu</span>
               </button>
-              <ul class="[ tab__dropdown ]">
-                <li>
-                  <a
-                    href="#"
-                    class="[ text-very-dark-black-blue ] [ hover-fw-bold ]"
-                    >Contact</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="[ text-very-dark-black-blue ] [ hover-fw-bold ]"
-                    >Newsletter</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="[ text-very-dark-black-blue ] [ hover-fw-bold ]"
-                    >LinkedIn</a
-                  >
-                </li>
+
+              <ul class="[ sub-menu ]">
+                <li><a href="#" class="[ tab__item ]">Contact</a></li>
+                <li><a href="#" class="[ tab__item ]">Newsletter</a></li>
+                <li><a href="#" class="[ tab__item ]">LinkedIn</a></li>
               </ul>
             </li>
+
+            <li class="[ login-btn ]"><a href="#">Login</a></li>
+            <li class="[ register-btn ]"><a href="#">Sign Up</a></li>
           </ul>
         </nav>
-
-        <div class="[ header-top__wrapper--buttons ]">
-          <a href="#" class="[ btn ] [ bg-transparent text-white ]">login</a>
-          <a href="#" class="[ btn invert ]">Sign Up</a>
-        </div>
       </section>
 
       <section class="[ header-bottom ]">

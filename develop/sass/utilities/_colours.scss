@@ -28,11 +28,11 @@
 }
 
 .bg-pinkish-red {
-  background-color: hsl(var(--clr-pinkish-red), var(--hsla));
+  background-image: linear-gradient(var(--clr-pinkish-red), var(--hsla));
 }
 
 .bg-onyx {
-  background-color: hsl(var(--clr-onyx), var(--hsla));
+  background-image: linear-gradient(var(--clr-onyx), var(--hsla));
 }
 
 .bg-transparent {
