@@ -1,14 +1,11 @@
 const menuButton = document.querySelector('.menu') as HTMLButtonElement;
 const navbar = document.querySelector('.header-top__navbar') as HTMLElement;
-const tabItemWithPopup = Array.from(
-  document.querySelectorAll('.tab__item[aria-haspopup="true"]')
-) as HTMLAnchorElement[];
 const tabWithSubMenu = Array.from(
   document.querySelectorAll('.tab.has-submenu')
 ) as HTMLLIElement[];
-const subMenus = Array.from(
-  document.querySelectorAll('sub-menu')
-) as HTMLUListElement[];
+const arrowButtons = Array.from(
+  document.querySelectorAll('button.has-icon')
+) as HTMLButtonElement[];
 
 // toggle menu on click
 menuButton.addEventListener('click', () => {
@@ -36,12 +33,27 @@ tabWithSubMenu.forEach((tab) => {
   });
 
   tab.addEventListener('mouseout', () => {
-    closeTab(tab);
+    tab.firstElementChild?.setAttribute('aria-expanded', 'false');
   });
 });
 
-function closeTab(tab: HTMLLIElement): void {
-  setTimeout(() => {
-    tab.firstElementChild?.setAttribute('aria-expanded', 'false');
-  }, 2000);
-}
+// show submenu on click/tab/enter
+arrowButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    if (button.parentElement?.className == '[ tab has-submenu ]') {
+      button.parentElement.className = '[ tab has-submenu ] open';
+
+      button.setAttribute('aria-expanded', 'true');
+      button.classList.add('rotate-180');
+      button.previousElementSibling?.setAttribute('aria-expanded', 'true');
+    } else {
+      if (button.parentElement) {
+        button.parentElement.className = '[ tab has-submenu ]';
+      }
+
+      button.setAttribute('aria-expanded', 'false');
+      button.classList.remove('rotate-180');
+      button.previousElementSibling?.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
