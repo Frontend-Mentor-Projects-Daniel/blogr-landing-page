@@ -30,10 +30,14 @@ menuButton.addEventListener('click', () => {
 tabWithSubMenu.forEach((tab) => {
   tab.addEventListener('mouseover', () => {
     tab.firstElementChild?.setAttribute('aria-expanded', 'true');
+    console.log(tab.firstElementChild?.firstElementChild);
+
+    tab.firstElementChild?.nextElementSibling?.classList.add('rotate-180');
   });
 
   tab.addEventListener('mouseout', () => {
     tab.firstElementChild?.setAttribute('aria-expanded', 'false');
+    tab.firstElementChild?.nextElementSibling?.classList.remove('rotate-180');
   });
 });
 

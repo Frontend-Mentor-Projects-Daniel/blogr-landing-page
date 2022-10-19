@@ -18,12 +18,15 @@ menuButton.addEventListener('click', function () {
 // show submenu on hover
 tabWithSubMenu.forEach(function (tab) {
     tab.addEventListener('mouseover', function () {
-        var _a;
+        var _a, _b, _c, _d;
         (_a = tab.firstElementChild) === null || _a === void 0 ? void 0 : _a.setAttribute('aria-expanded', 'true');
+        console.log((_b = tab.firstElementChild) === null || _b === void 0 ? void 0 : _b.firstElementChild);
+        (_d = (_c = tab.firstElementChild) === null || _c === void 0 ? void 0 : _c.nextElementSibling) === null || _d === void 0 ? void 0 : _d.classList.add('rotate-180');
     });
     tab.addEventListener('mouseout', function () {
-        var _a;
+        var _a, _b, _c;
         (_a = tab.firstElementChild) === null || _a === void 0 ? void 0 : _a.setAttribute('aria-expanded', 'false');
+        (_c = (_b = tab.firstElementChild) === null || _b === void 0 ? void 0 : _b.nextElementSibling) === null || _c === void 0 ? void 0 : _c.classList.remove('rotate-180');
     });
 });
 // show submenu on click/tab/enter
