@@ -38,22 +38,6 @@
     max-width: 22.688rem;
     position: relative;
     z-index: 11111;
-
-    // &::after {
-    //   content: '';
-
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-
-    //   background-image: url('../assets/images/bg-pattern-circles.svg');
-    //   background-repeat: no-repeat;
-    //   background-size: cover;
-
-    //   height: 21.8125rem;
-    //   width: 21.875rem;
-    //   z-index: -1;
-    // }
   }
 
   &__content {
@@ -72,6 +56,12 @@
     p {
       max-width: 49ch;
       text-align: center;
+    }
+  }
+
+  @include breakpoint-custom(20.8125em) {
+    &__background {
+      z-index: -1111;
     }
   }
 

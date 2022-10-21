@@ -69,13 +69,17 @@
   --space-3xs-xs: clamp(0.31rem, calc(0.09rem + 0.94vw), 0.94rem);
   --space-3xs-xl: clamp(0.31rem, calc(-0.9rem + 5.16vw), 3.75rem);
   --space-2xs-xs: clamp(0.56rem, calc(0.43rem + 0.56vw), 0.94rem);
+  --space-2xs-6xl: clamp(0.56rem, calc(-3.2rem + 16.06vw), 11.25rem);
   --space-s-l: clamp(1.13rem, calc(0.64rem + 2.07vw), 2.5rem);
+  --space-s-6xl: clamp(1.13rem, calc(-2.44rem + 15.21vw), 11.25rem);
   --space-m-3xl: clamp(1.69rem, calc(-0.36rem + 8.73vw), 7.5rem);
   --space-m-5xl: clamp(1.69rem, calc(-1.24rem + 12.49vw), 10rem);
   --space-m-10xl: clamp(1.69rem, calc(-3.44rem + 21.88vw), 16.25rem);
   --space-l-2xl: clamp(2.25rem, calc(1.28rem + 4.13vw), 5rem);
+  --space-l-6xl: clamp(2.25rem, calc(-0.92rem + 13.52vw), 11.25rem);
   --space-2xl-6xl: clamp(4.5rem, calc(2.12rem + 10.14vw), 11.25rem);
-  --space-3xl-4xl: clamp(6.75rem, calc(6.05rem + 3vw), 8.75rem);
+  --space-2xl-8xl: clamp(4.5rem, calc(1.24rem + 13.9vw), 13.75rem);
+  --space-3xl-8xl: clamp(6.75rem, calc(4.29rem + 10.52vw), 13.75rem);
 
   --space-m-3xs: clamp(0.31rem, calc(2.17rem + -2.07vw), 1.69rem);
   --space-l-3xs: clamp(0.31rem, calc(2.93rem + -2.91vw), 2.25rem);
